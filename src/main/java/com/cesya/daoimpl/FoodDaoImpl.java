@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component//spring boot dao kamtmanını componnet anatasyonu ile konteynırından bulur
-public class ImplFoodDao implements IFoodDao {
+public class FoodDaoImpl implements IFoodDao {
 
     @Autowired
     private IFoodRepository repository;

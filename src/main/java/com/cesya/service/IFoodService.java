@@ -11,15 +11,15 @@ public interface IFoodService {
 
     List<FoodEntity> getAllList();
 
-    FoodEntity createOrUpdate(FoodDto foodDto, Long userId) throws CustomException;
+    FoodEntity createOrUpdate(FoodDto foodDto) throws CustomException;
 
-    String deletById(Long id, Long userId) throws CustomException;
+    String deleteById(Long id) throws CustomException;
 
     FoodEntity getById(Long id);
 
     List<FoodEntity> search(String search);
 
-    FoodEntity newCreateOrUpdate(MultipartFile file,String json,Long userId) throws CustomException;
+//    FoodEntity newCreateOrUpdate(MultipartFile file,String json,Long userId) throws CustomException;
 
 
 }

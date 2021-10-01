@@ -2,7 +2,7 @@ package com.cesya.dto;
 
 public class FoodDto {
 
-    private Integer id;
+    private Long id;
 
     private String title;
 
@@ -11,16 +11,16 @@ public class FoodDto {
     private String foodDetails;
 
     private Integer point;
+//
+//    private Long userId;
 
-    private Long userId;
+//    private String comment;
 
-    private String comment;
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -56,19 +56,19 @@ public class FoodDto {
         this.point = point;
     }
 
-    public Long getUserId() {
+/*    public Long getUserId() {
         return userId;
     }
 
     public void setUserId(Long userId) {
         this.userId = userId;
-    }
+    }*/
 
-    public String getComment() {
+/*    public String getComment() {
         return comment;
     }
 
     public void setComment(String comment) {
         this.comment = comment;
-    }
+    }*/
 }
