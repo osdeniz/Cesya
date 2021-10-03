@@ -45,13 +45,6 @@ public class FoodEntity {
         this.id = id;
     }
 
-    /**    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH})
-    private UserEntity user;
-
-     @OneToOne(cascade = CascadeType.ALL)
-     @JoinColumn(name = "image_id",referencedColumnName = "id")
-     private ImageEntity image; **/
-
 
 
     public String getTitle() {
@@ -69,7 +62,6 @@ public class FoodEntity {
     public void setDescription(String description) {
         this.description = description;
     }
-
 
     public String getFoodDetails() {
         return foodDetails;
