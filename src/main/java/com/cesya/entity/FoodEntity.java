@@ -28,6 +28,27 @@ public class FoodEntity {
     @Column(name = "POINT")
     private Integer point;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH})
+    private StudentEntity student;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE,CascadeType.REFRESH})
+    private StudentEntity score;
+
+    public StudentEntity getStudent() {
+        return student;
+    }
+
+    public void setStudent(StudentEntity student) {
+        this.student = student;
+    }
+
+    public StudentEntity getScore() {
+        return score;
+    }
+
+    public void setScore(StudentEntity score) {
+        this.score = score;
+    }
 
     public Date getCreateDate() {
         return createDate;
@@ -44,8 +65,6 @@ public class FoodEntity {
     public void setId(Long id) {
         this.id = id;
     }
-
-
 
     public String getTitle() {
         return title;

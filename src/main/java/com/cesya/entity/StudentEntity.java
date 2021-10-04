@@ -11,7 +11,6 @@ import java.util.Set;
 @Table(name = "STUDENT_TABLE")
 public class StudentEntity {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "Id")
@@ -31,6 +30,16 @@ public class StudentEntity {
 
     @Column(name = "SCORE")
     private Integer score;
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy ="student")
+    @JsonIgnore
+    private Set<FoodEntity> foods = new HashSet<>();
+
+    @OneToMany(cascade = CascadeType.ALL,mappedBy ="score")
+    @JsonIgnore
+    private Set<FoodEntity> point = new HashSet<>();
+
+
 
 
     public Long getId() {
